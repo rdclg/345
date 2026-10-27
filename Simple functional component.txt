@@ -1,0 +1,8 @@
+ Simple functional component
+function App() {
+  return <h1>Hello React</h1>;
+}
+export default App;
+Expected output:
+Browser displays: Hello React
+Remember: Save in src/App.jsx.

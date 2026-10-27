@@ -1,0 +1,8 @@
+Welcome and Footer with name/college
+function Welcome() { return <h2>My name is Aman</h2>; }
+function Footer() { return <p>National College</p>; }
+function App() { return <div><Welcome /><Footer /></div>; }
+export default App;
+Expected output:
+My name is Aman
+National College

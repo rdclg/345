@@ -1,0 +1,9 @@
+. External CSS
+// App.jsx
+import "./App.css";
+function App() { return <h1 className="title">Hello React</h1>; }
+export default App;
+// App.css
+.title { color: blue; }
+Expected output:
+Blue heading in browser

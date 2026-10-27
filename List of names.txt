@@ -1,0 +1,10 @@
+ List of names
+function App() {
+  const names = ["Aman", "Riya", "Neha"];
+  return <div>{names.map(name => <p key={name}>{name}</p>)}</div>;
+}
+export default App;
+Expected output:
+Aman
+Riya
+Neha

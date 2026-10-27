@@ -1,0 +1,10 @@
+Props for student
+function Student(props) {
+  return <p>{props.name} - {props.roll} - {props.course}</p>;
+}
+function App() {
+  return <Student name="Aman" roll="12" course="BSc IT" />;
+}
+export default App;
+Expected output:
+Aman - 12 - BSc IT

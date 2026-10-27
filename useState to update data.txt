@@ -1,0 +1,11 @@
+ useState to update data
+import { useState } from "react";
+function App() {
+  const [name, setName] = useState("Aman");
+  return <div><p>{name}</p>
+    <button onClick={() => setName("Riya")}>Change</button>
+  </div>;
+}
+export default App;
+Expected output:
+Initially Aman; after click Riya

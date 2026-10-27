@@ -1,0 +1,13 @@
+CollegeDB tasks: find by roll, marks > 75, deleteOne
+use CollegeDB
+db.Students.insertMany([
+  { roll: 1, name: "Aman", marks: 80 },
+  { roll: 2, name: "Riya", marks: 70 },
+  { roll: 3, name: "Neha", marks: 90 }
+])
+db.Students.findOne({ roll: 1 })
+db.Students.find({ marks: { $gt: 75 } })
+db.Students.deleteOne({ roll: 2 })
+Run: Enter in mongosh
+Expected output:
+Finds roll 1; shows marks above 75; deletes roll 2

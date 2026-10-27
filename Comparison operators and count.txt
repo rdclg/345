@@ -1,0 +1,9 @@
+Comparison operators and count
+use CollegeDB
+db.Students.find({ marks: { $gt: 75 } })
+db.Students.find({ marks: { $lt: 75 } })
+db.Students.find({ marks: { $eq: 75 } })
+db.Students.countDocuments({ marks: { $gt: 75 } })
+Run: Enter in mongosh
+Expected output:
+Displays matching students and a count

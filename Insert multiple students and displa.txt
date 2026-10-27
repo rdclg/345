@@ -1,0 +1,10 @@
+ Insert multiple students and display all
+use CollegeDB
+db.Students.insertMany([
+  { roll: 1, name: "Aman", marks: 80 },
+  { roll: 2, name: "Riya", marks: 90 }
+])
+db.Students.find()
+Run: Enter in mongosh
+Expected output:
+Displays both student documents

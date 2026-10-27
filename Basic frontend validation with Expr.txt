@@ -1,0 +1,14 @@
+ Basic frontend validation with Express
+const express = require("express");
+const app = express();
+app.use(express.json());
+app.post("/register", (req, res) => {
+  if (!req.body.name || !req.body.email) {
+    return res.status(400).json({ message: "Name and email required" });
+  }
+  res.json({ message: "Valid details" });
+});
+app.listen(5000);
+Run: node server.js; test POST /register
+Expected output:
+Missing fields: Name and email required

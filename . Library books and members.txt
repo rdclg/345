@@ -1,0 +1,9 @@
+. Library /books and /members
+const express = require("express");
+const app = express();
+app.get("/books", (req, res) => res.json(["JS", "React"]));
+app.get("/members", (req, res) => res.json(["Aman", "Riya"]));
+app.listen(5000);
+Run: node server.js
+Expected output:
+/books returns books; /members returns members

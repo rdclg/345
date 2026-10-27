@@ -1,0 +1,10 @@
+ Student details with JSX
+function App() {
+  const student = { name: "Aman", roll: 12, course: "BSc IT" };
+  return <div><p>{student.name}</p><p>{student.roll}</p><p>{student.course}</p></div>;
+}
+export default App;
+Expected output:
+Aman
+12
+BSc IT

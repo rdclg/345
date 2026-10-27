@@ -1,0 +1,20 @@
+To-do add/delete
+import { useState } from "react";
+function App() {
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+  function addTask() {
+    if (task.trim() !== "") setTasks([...tasks, task]);
+    setTask("");
+  }
+  return <div>
+    <input value={task} onChange={e => setTask(e.target.value)} />
+    <button onClick={addTask}>Add</button>
+    {tasks.map((t, i) => <p key={i}>{t}
+      <button onClick={() => setTasks(tasks.filter((_, j) => j !== i))}>Delete</button>
+    </p>)}
+  </div>;
+}
+export default App;
+Expected output:
+Typed tasks appear; Delete removes a task

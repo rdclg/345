@@ -1,0 +1,11 @@
+ Welcome server response
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => {
+  res.send("Welcome to Node.js and Express");
+});
+app.listen(5000, () => console.log("Server running on port 5000"));
+Run: node server.js
+Expected output:
+Terminal: Server running on port 5000
+Browser: Welcome to Node.js and Express

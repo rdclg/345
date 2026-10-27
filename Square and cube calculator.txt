@@ -1,0 +1,12 @@
+Square and cube calculator
+import { useState } from "react";
+function App() {
+  const [n, setN] = useState(3);
+  return <div>
+    <input type="number" value={n} onChange={e => setN(Number(e.target.value))} />
+    <p>Square: {n * n}</p><p>Cube: {n * n * n}</p>
+  </div>;
+}
+export default App;
+Expected output:
+For 3: Square 9, Cube 27

@@ -1,0 +1,12 @@
+ Sum of two numbers
+import { useState } from "react";
+function App() {
+  const [sum, setSum] = useState(0);
+  return <div>
+    <button onClick={() => setSum(10 + 20)}>Add</button>
+    <p>Sum: {sum}</p>
+  </div>;
+}
+export default App;
+Expected output:
+After clicking Add: Sum: 30

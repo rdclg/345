@@ -1,0 +1,11 @@
+ Insert and update a record
+use CollegeDB
+db.Students.insertOne({ roll: 3, name: "Neha", marks: 70 })
+db.Students.updateOne(
+  { roll: 3 },
+  { $set: { marks: 85 } }
+)
+db.Students.find({ roll: 3 })
+Run: Enter in mongosh
+Expected output:
+Neha's marks become 85

@@ -1,0 +1,11 @@
+ Retrieve books using GET API (MongoDB/Mongoose)
+const express = require("express");
+const mongoose = require("mongoose");
+const app = express();
+mongoose.connect("mongodb://127.0.0.1:27017/LibraryDB");
+const Book = mongoose.model("Book", new mongoose.Schema({ title: String }));
+app.get("/api/books", async (req, res) => res.json(await Book.find()));
+app.listen(5000);
+Run: Install express mongoose; run node server.js
+Expected output:
+GET http://localhost:5000/api/books returns stored books

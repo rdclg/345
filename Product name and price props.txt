@@ -1,0 +1,8 @@
+ Product name and price props
+function Product(props) {
+  return <p>{props.name}: Rs. {props.price}</p>;
+}
+function App() { return <Product name="Pen" price={10} />; }
+export default App;
+Expected output:
+Pen: Rs. 10

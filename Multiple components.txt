@@ -1,0 +1,11 @@
+ Multiple components
+function Header() { return <h1>Header</h1>; }
+function Footer() { return <p>Footer</p>; }
+function App() {
+  return <div><Header /><p>Main page</p><Footer /></div>;
+}
+export default App;
+Expected output:
+Header
+Main page
+Footer

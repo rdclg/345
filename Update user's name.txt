@@ -1,0 +1,11 @@
+ Update user's name
+import { useState } from "react";
+function App() {
+  const [name, setName] = useState("Student");
+  return <div><h2>{name}</h2>
+    <button onClick={() => setName("Aman")}>Update Name</button>
+  </div>;
+}
+export default App;
+Expected output:
+Student, then Aman after click

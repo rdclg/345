@@ -1,0 +1,17 @@
+Send form data to backend
+import { useState } from "react";
+import axios from "axios";
+export default function App() {
+  const [name, setName] = useState("");
+  async function submit(e) {
+    e.preventDefault();
+    await axios.post("http://localhost:5000/api/students", { name });
+    alert("Data sent");
+  }
+  return <form onSubmit={submit}>
+    <input value={name} onChange={e => setName(e.target.value)} />
+    <button>Submit</button>
+  </form>;
+}
+Expected output:
+Sends { name: ... } to the backend

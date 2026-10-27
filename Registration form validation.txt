@@ -1,0 +1,28 @@
+ Registration form validation
+import { useState } from "react";
+function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  function submit(e) {
+    e.preventDefault();
+    if (!name || !email.includes("@") || phone.length !== 10 || password.length < 6) {
+      alert("Enter valid details");
+    } else {
+      alert("Registration successful");
+    }
+  }
+  return <form onSubmit={submit}>
+    <input placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+    <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+    <input placeholder="10-digit phone" value={phone} onChange={e => setPhone(e.target.
+value)} />
+    <input type="password" placeholder="Password" value={password} onChange={e => 
+setPassword(e.target.value)} />
+    <button>Register</button>
+  </form>;
+}
+export default App;
+Expected output:
+Shows alert based on validation

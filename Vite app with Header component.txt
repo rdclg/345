@@ -1,0 +1,9 @@
+ Vite app with Header component
+function Header() {
+  return <h1>Welcome to MERN Stack Development</h1>;
+}
+function App() { return <Header />; }
+export default App;
+Run: npm run dev
+Expected output:
+Browser shows Welcome to MERN Stack Development

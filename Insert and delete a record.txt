@@ -1,0 +1,8 @@
+ Insert and delete a record
+use CollegeDB
+db.Students.insertOne({ roll: 4, name: "Raj", marks: 60 })
+db.Students.deleteOne({ roll: 4 })
+db.Students.find({ roll: 4 })
+Run: Enter in mongosh
+Expected output:
+No matching record remains

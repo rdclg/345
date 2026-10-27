@@ -1,0 +1,13 @@
+POST API to accept student details
+const express = require("express");
+const app = express();
+app.use(express.json());
+let students = [];
+app.post("/students", (req, res) => {
+  students.push(req.body);
+  res.json({ message: "Student added", student: req.body });
+});
+app.listen(5000);
+Run: node server.js; test POST /students in Postman with JSON body
+Expected output:
+Returns Student added and submitted student

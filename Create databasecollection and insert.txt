@@ -1,0 +1,7 @@
+ Create database/collection and insert records (mongosh)
+use CollegeDB
+db.Students.insertOne({ roll: 1, name: "Aman", marks: 80 })
+db.Students.find()
+Run: Enter commands in mongosh
+Expected output:
+Shows the inserted student document

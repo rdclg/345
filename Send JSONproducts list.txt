@@ -1,0 +1,10 @@
+Send JSON/products list
+const express = require("express");
+const app = express();
+app.get("/products", (req, res) => {
+  res.json([{ id: 1, name: "Pen" }, { id: 2, name: "Book" }]);
+});
+app.listen(5000);
+Run: node server.js
+Expected output:
+JSON list appears at http://localhost:5000/products

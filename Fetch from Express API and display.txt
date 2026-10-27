@@ -1,0 +1,19 @@
+ Fetch from Express API and display/filter
+import { useEffect, useState } from "react";
+import axios from "axios";
+export default function App() {
+  const [students, setStudents] = useState([]);
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/students")
+      .then(res => setStudents(res.data))
+      .catch(err => console.log(err));
+  }, []);
+  return <div>
+    <input placeholder="Search student" onChange={e => setSearch(e.target.value)} />
+    {students.filter(s => s.name.toLowerCase().includes(search.toLowerCase()))
+      .map(s => <p key={s.id}>{s.name} - {s.marks}</p>)}
+  </div>;
+}
+Expected output:
+Displays filtered students when the backend is running

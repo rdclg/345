@@ -1,0 +1,14 @@
+ React and Express integration — backend
+const express = require("express");
+const cors = require("cors");
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.get("/api/message", (req, res) => {
+  res.json({ message: "Hello from Express" });
+});
+app.listen(5000);
+Run: Install with npm install express cors, then node server.js
+Expected output:
+GET http://localhost:5000/api/message returns JSON
+Remember: React can fetch this endpoint; install dependencies first.

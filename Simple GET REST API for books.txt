@@ -1,0 +1,9 @@
+. Simple GET REST API for books
+const express = require("express");
+const app = express();
+const books = [{ id: 1, title: "JavaScript" }, { id: 2, title: "React" }];
+app.get("/api/books", (req, res) => res.json(books));
+app.listen(5000, () => console.log("Server on 5000"));
+Run: node server.js
+Expected output:
+GET http://localhost:5000/api/books returns two books

@@ -1,0 +1,13 @@
+ Heading and paragraph
+function App() {
+  return (
+    <div>
+      <h1>My Heading</h1>
+      <p>This is a paragraph.</p>
+    </div>
+  );
+}
+export default App;
+Expected output:
+My Heading
+This is a paragraph.
